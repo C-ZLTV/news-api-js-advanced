@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-flex">
+        <h1 class="main-header">Newest Hacker News</h1>
+        <p class="sub-header">Available in near real time</p>
+      </div>
+    </header>
+    <main>
+      <div class="container main-flex">
+        <section class="sidebar-section">
+          <div class="container sidebar-flex">
+            <div id="date-wrapper">
+              <!-- <p>
+                <span>Today is</span>
+                <span class="week-day">${day}</span>
+              </p>
+              <p class="full-date">${date}</p> -->
+            </div>
+            <div id="weather-wrapper">
+              <!-- <div class="weather">
+                <span class="city">${cityName}:</span>
+                <span class="temp">${Math.ceil(
+                  city.current_weather.temperature
+                )}</span>
+                <span class="celsius">C&deg;</span>
+              </div>`;-->
+            </div>
+          </div>
+        </section>
+        <section class="news-section">
+          <div class="container news-flex">
+            <div id="news-wrapper">
+              <!-- <div class="story">
+                <a class="story-title" href="${story.url}">${story.title}</a>
+                <p class="story-date">${date}</p>
+                <p class="story-author">Author: ${story.by}</p>
+            </div>`-->
+            </div>
+            <div class="actions">
+              <button id="load-more-btn">Load More</button>
+              <div class="stories-display-count">
+                <span id="displayed-stories"></span>
+                <span>of</span>
+                <span id="total-stories"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-flex">
+        <p class="footer-author">Cristina Zlatov</p>
+        <div class="social-links">
+          <a
+            class="social-link"
+            href="https://github.com/C-ZLTV"
+            rel="noopener"
+            target="_blank"
+          >
+            <img src="public/images/gihbub.svg" alt="GitHub logo icon" />
+          </a>
+          <a
+            class="social-link"
+            href="https://www.linkedin.com/in/cristina-zlatov/"
+            rel="noopener"
+            target="_blank"
+          >
+            <img src="public/images/likedin.svg" alt="LikedIn logo icon" />
+          </a>
+          <a
+            class="social-link"
+            href="https://twitter.com/zlatov_cristina"
+            rel="noopener"
+            target="_blank"
+          >
+            <img src="public/images/twitter.svg" alt="Twitter logo icon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="JS/main.js"></script>
+  </body>
+</html>

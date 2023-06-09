@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #b8b6b6;
+}
+
+img {
+  display: block;
+  width: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #11020a;
+  color: #b8b6b6;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: min(90%, 960px);
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+
+.main-header {
+  color: #59c8ee;
+  font-size: clamp(2rem, 5.5vw, 7rem);
+}
+
+.sub-header {
+  font-size: clamp(1rem, 2vw, 3rem);
+}
+
+.sidebar-section {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+#date-wrapper {
+  margin-bottom: 1rem;
+}
+
+.week-day {
+  font-size: clamp(1.75rem, 4.5vw, 4rem);
+}
+
+#weather-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.story {
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.story .story-title {
+  color: #d0c4ad;
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+#load-more-btn {
+  background-color: #59c8ee;
+  color: #11020a;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-author {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .main-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sidebar-section {
+    flex-basis: 35%;
+    border-right: 1px solid #59c8ee;
+  }
+  #weather-wrapper {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 0.5rem;
+  }
+  #date-wrapper {
+    margin-bottom: 5rem;
+  }
+  img {
+    width: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

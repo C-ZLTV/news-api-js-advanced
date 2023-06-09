@@ -1,0 +1,142 @@
+$main-color: #11020aff;
+$accent-color-bright: #59c8eeff;
+$accent-color-dark: #d0c4ad;
+$neutral-color: #b8b6b6ff;
+
+//reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $neutral-color;
+}
+
+img {
+  display: block;
+  width: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $main-color;
+  color: $neutral-color;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: min(90%, 960px);
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+
+//header
+.main-header {
+  color: $accent-color-bright;
+  font-size: clamp(2rem, 5.5vw, 7rem);
+}
+
+.sub-header {
+  font-size: clamp(1rem, 2vw, 3rem);
+}
+
+//main - sidebar section
+
+.sidebar-section {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+#date-wrapper {
+  margin-bottom: 1rem;
+}
+
+.week-day {
+  font-size: clamp(1.75rem, 4.5vw, 4rem);
+}
+
+#weather-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+//main - news section
+
+.story {
+  margin-bottom: 2rem;
+  font-weight: 300;
+
+  .story-title {
+    color: $accent-color-dark;
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+    font-weight: 600;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+#load-more-btn {
+  background-color: $accent-color-bright;
+  color: $main-color;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+
+//footer
+.footer-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-author {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+//media
+@media screen and (min-width: 600px) {
+  //main
+  .main-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  //main - sidebar
+  .sidebar-section {
+    flex-basis: 35%;
+    border-right: 1px solid $accent-color-bright;
+  }
+
+  #weather-wrapper {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 0.5rem;
+  }
+
+  #date-wrapper {
+    margin-bottom: 5rem;
+  }
+
+  //footer
+  img {
+    width: 20px;
+  }
+}
