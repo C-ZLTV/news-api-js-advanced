@@ -32,7 +32,7 @@ body {
 
 .main-header {
   color: #59c8ee;
-  font-size: clamp(2rem, 5.5vw, 7rem);
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
 .sub-header {
@@ -54,7 +54,7 @@ body {
 }
 
 .week-day {
-  font-size: clamp(1.75rem, 4.5vw, 4rem);
+  font-size: clamp(1.5rem, 3.5vw, 3.5rem);
 }
 
 #weather-wrapper {
