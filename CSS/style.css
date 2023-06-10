@@ -109,7 +109,7 @@ body {
 @media screen and (min-width: 600px) {
   .main-flex {
     display: flex;
-    justify-content: space-between;
+    gap: 3rem;
   }
   .sidebar-section {
     flex-basis: 35%;
