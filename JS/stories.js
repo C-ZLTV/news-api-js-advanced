@@ -1,4 +1,4 @@
-import { displayTenStories } from "./main.js";
+import { displayTenStories, displayError } from "./main.js";
 
 //MODEL
 
@@ -15,8 +15,7 @@ async function fetchStoriesIds() {
     const ids = response.json();
     return ids;
   } catch (error) {
-    console.log(error);
-    alert(error.message);
+    console.error(error);
   }
 }
 
@@ -34,8 +33,7 @@ async function fetchStory(id) {
 
     return story;
   } catch (error) {
-    console.log(error);
-    alert(error.message);
+    console.error(error);
   }
 }
 
@@ -53,7 +51,7 @@ export async function fetchTenStories(index) {
 
     return tenStories;
   } catch (error) {
-    console.log(error);
-    alert(error.message);
+    displayError();
+    console.error(error);
   }
 }

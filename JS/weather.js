@@ -1,4 +1,4 @@
-import { displayWeather } from "./main.js";
+import { displayWeather, displayError } from "./main.js";
 
 //MODEL
 const coordinates = [
@@ -11,25 +11,34 @@ const coordinates = [
 ];
 
 async function getWeather(lat, long) {
-  const response = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m,weathercode&current_weather=true&timeformat=unixtime&forecast_days=1&timezone=Europe%2FBerlin`
-  );
+  try {
+    const response = await fetch(
+      `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m,weathercode&current_weather=true&timeformat=unixtime&forecast_days=1&timezone=Europe%2FBerlin`
+    );
 
-  const data = await response.json();
+    const data = await response.json();
 
-  return data;
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export async function getCitiesWeather() {
-  let weatherPromises = coordinates.map((city) => {
-    return getWeather(city.lat, city.long);
-  });
+  try {
+    let weatherPromises = coordinates.map((city) => {
+      return getWeather(city.lat, city.long);
+    });
 
-  let weather = await Promise.all(weatherPromises);
+    let weather = await Promise.all(weatherPromises);
 
-  displayWeather(weather);
+    displayWeather(weather);
 
-  return weather;
+    return weather;
+  } catch (error) {
+    displayError();
+    console.error(error);
+  }
 }
 
 getCitiesWeather();

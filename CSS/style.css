@@ -39,6 +39,12 @@ body {
   font-size: clamp(1rem, 2vw, 3rem);
 }
 
+.error-message {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 4rem;
+  color: #d0c4ad;
+}
+
 .sidebar-section {
   font-size: clamp(0.8rem, 2vw, 1rem);
 }

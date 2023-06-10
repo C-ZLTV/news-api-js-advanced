@@ -11,6 +11,7 @@ const loadMoreBtn = document.querySelector("#load-more-btn");
 const newsWrapper = document.querySelector("#news-wrapper");
 const displayedStoriesEL = document.querySelector("#displayed-stories");
 const totalStoriesEl = document.querySelector("#total-stories");
+const newSection = document.querySelector(".news-section");
 
 totalStoriesEl.innerText = "500";
 
@@ -27,6 +28,16 @@ export function displayTenStories(array) {
         </div>`;
     newsWrapper.insertAdjacentHTML("beforeend", html);
   });
+}
+
+export function displayError() {
+  const errorHtml = `
+      <div class="error-message">
+          <p>Something went wrong.</p>
+          <p>Please reload the page.</p>
+      </div>
+      `;
+  newSection.innerHTML = errorHtml;
 }
 
 //Weather
